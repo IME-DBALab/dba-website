@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import Logo from "@/assets/hufs_logo.png"
 import Image from "next/image"
+import Head from "next/head"
 
 const menu = [
   { name: "Home", href: "/" },
@@ -15,14 +16,19 @@ const menu = [
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
+      <Head>
+        <title>IME-DBALab</title>
+      </Head>
       <header>
-        <div className="flex justify-between p-2 items-middle">
+        <div className="flex flex-col lg:flex-row justify-between p-2 items-middle w-max lg:w-auto">
           <LabDetailsPanel />
           <Menu />
         </div>
       </header>
       <main>
-        <div className="md:p-20">{children}</div>
+        <div className="md:p-20 justify-center">
+          <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">{children}</div>
+        </div>
       </main>
       <footer></footer>
     </>
@@ -33,7 +39,7 @@ export default Layout
 
 const LabDetailsPanel = () => {
   return (
-    <div className="flex justify-between align-middle">
+    <div className="flex justify-center align-middle">
       <Image
         width={80}
         src={Logo}
@@ -51,7 +57,7 @@ const LabDetailsPanel = () => {
 
 const Menu = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex items-center mt-5 lg:mt-0">
       {menu.map((item) => (
         <div className="mx-2" key={item.name}>
           <MenuItem name={item.name} href={item.href} />
@@ -68,7 +74,11 @@ interface IMenuItem {
 
 const MenuItem = ({ name, href }: IMenuItem) => {
   return (
-    <a href={href} className="text-gray-600 hover:text-gray-800">
+    <a
+      href={href}
+      className="text-gray-600 hover:text-secondary hover:border-secondary"
+      style={{ borderBottomWidth: "2px" }}
+    >
       {name}
     </a>
   )
