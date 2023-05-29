@@ -5,8 +5,6 @@ import Head from "next/head"
 
 const menu = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Members", href: "/members" },
   { name: "Publications", href: "/publications" },
   { name: "Research", href: "/research" },
   { name: "Contact", href: "/contact" },
