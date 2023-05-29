@@ -2,6 +2,7 @@ import { ReactNode } from "react"
 import Logo from "@/assets/hufs_logo.png"
 import Image from "next/image"
 import Head from "next/head"
+import Link from "next/link"
 
 const menu = [
   { name: "Home", href: "/" },
@@ -72,12 +73,12 @@ interface IMenuItem {
 
 const MenuItem = ({ name, href }: IMenuItem) => {
   return (
-    <a
+    <Link
       href={href}
       className="text-gray-600 hover:text-secondary hover:border-secondary"
       style={{ borderBottomWidth: "2px" }}
     >
       {name}
-    </a>
+    </Link>
   )
 }

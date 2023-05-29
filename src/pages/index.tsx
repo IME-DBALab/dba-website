@@ -14,7 +14,7 @@ const newsList: New[] = [
   {
     date: "2023.05.30",
     title: "현우's thesis defense",
-    url: "",
+    url: "/",
   },
   {
     date: "2023.05.25",
@@ -43,7 +43,7 @@ const Home = () => {
         <ul>
           {newsList.map((news, index) => (
             <li key={index}>
-              <a href={news.url}>
+              <a href={news.url} target="_blank">
                 <div className="flex items-center text-gray-700 underline underline-offset-2 mb-1">
                   <ChevronDoubleRightIcon className="h-4 w-4 text-gray-500" />
                   {news.date} {news.title}
