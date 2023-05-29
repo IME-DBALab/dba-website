@@ -2,7 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab:wght@400;600&display=swap');
+
+@layer base {
+  @font-face {
+      font-family: 'Roboto Slab';
+      src: url("../assets/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+      font-weight: 400;
+      font-style: normal;
+  }
+  @font-face {
+      font-family: 'Noto Sans KR';
+      src: url("../assets/Noto_Sans_KR/NotoSansKR-Regular.otf");
+      font-weight: 400;
+      font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: url("../assets/Noto_Sans_KR/NotoSansKR-Bold.otf");
+    font-weight: 800;
+    font-style: Bold;
+}
+  
+}
+
+body {
+  @apply font-paragraph
+}
 
 h1 {
+  @apply font-title;
   @apply text-4xl;
+  @apply font-bold;
+}
+
+h2 {
+  @apply font-title;
+  @apply text-3xl;
+  @apply font-bold;
 }
