@@ -1,12 +1,15 @@
 {
   "name": "dba-website",
+  "homepage": "https://ime-dbalab.github.io/dba-website/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -24,6 +27,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "mini-css-extract-plugin": "^2.7.6"
   }
 }
