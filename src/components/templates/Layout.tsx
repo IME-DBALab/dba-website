@@ -9,6 +9,7 @@ const menu = [
   { name: "Publications", href: "/publications" },
   { name: "Research", href: "/research" },
   { name: "Contact", href: "/contact" },
+  { name: "Projects", href: "/projects" },
   { name: "Seminar", href: "/seminar" },
 ]
 
