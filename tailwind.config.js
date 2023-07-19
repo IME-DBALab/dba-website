@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         title: ['Roboto Slab'],
-        paragraph: ['Noto Sans KR'],
+        paragraph: ['Roboto'],
       },
       colors: {
         primary: '#000',
