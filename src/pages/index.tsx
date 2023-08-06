@@ -1,3 +1,4 @@
+import { TimeLine } from "@/components/TimeLine"
 import { Layout } from "@/components/templates"
 import {
   ChevronDoubleRightIcon,
@@ -36,6 +37,10 @@ const Home = () => {
         adaptable and eagerly seeking opportunities to expand the implementation
         of AI in the industrial sector.
       </p>
+
+      <h1 className="mt-5">Timeline</h1>
+      <TimeLine className="mt-3" />
+
       <h2 className="mt-5 flex items-center">
         <NewspaperIcon className="h-7 w-7" /> News
       </h2>

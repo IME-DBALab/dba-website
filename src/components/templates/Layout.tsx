@@ -27,7 +27,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       </header>
       <main>
         <div className="md:p-20 justify-center">
-          <div className="w-full md:w-3/4 lg:w-1/2 mx-auto">{children}</div>
+          <div className="w-full md:w-3/4 lg:w-3/4 mx-auto">{children}</div>
         </div>
       </main>
       <footer></footer>
